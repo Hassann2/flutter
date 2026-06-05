@@ -239,6 +239,9 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: const Icon(Icons.abc_outlined),
               label: const Text("Pulsante con bordo e icona"),
             ),
+
+            // Creazione di un'icona come immagine, non svolge nessuna azione
+            const Icon(Icons.ac_unit),
           ],
         ),
       ),
