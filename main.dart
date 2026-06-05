@@ -33,6 +33,8 @@ class MyApp extends StatelessWidget {
         // Crea una combinazione di colori partendo dal colore viola, poi i colori che vengono prossimamente dipendono da esso
         // .fromSeed genera automaticamente colori complementari
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        /* Dico che il seguente testo avrà come tema il font di google che ho importato all'inizio del codice, 
+        andando a sovvrascivere il tema di default di Flutter */
         textTheme: GoogleFonts.playwriteGbJTextTheme(),
       ),
 
