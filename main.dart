@@ -199,6 +199,21 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () => {},
               icon: Icon(Icons.access_time_filled),
               label: const Text("Pulsante con ripieno e icona"),
+              /* Lo stile del pulsante per modificare il colore del testo all'interno del pulsante si deve,
+               andare ad alle proprietà del colore con l'attributo all<Color> andiamo a dire di andare ad accedere a tutta la lista di colori che sarà di tipo Color
+               Infine andiamo a dire che tra la lista di colori vogliamo usare il colore rosso (Colors è un'array di colori) 
+              */
+              style: ButtonStyle(
+                foregroundColor: WidgetStateProperty.all<Color>(Colors.red),
+
+                // è la proprietà di flutter che controlla i colori quando l'utente interagisce con un widget cliccabile, come ad esempio un pulsante
+                overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
+                  if (states.contains(WidgetState.pressed)) {
+                    return Colors.amber;
+                  }
+                  return null;
+                }),
+              ),
             ),
 
             OutlinedButton.icon(
