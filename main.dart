@@ -221,6 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //   }),
               // ),
 
+              // 2:
               /* il secondo modo andiamo ad accedere alla proprietà style dello specifico pulsante (Elevated Button),
               mentre prima accedevamo allo stile dei pulsanti in maniera generale, quì andiamo ad accedere ai attributi dello specifico pulsante
               permettendoci così di stilizzare il pulsante in maniera più semplice */
