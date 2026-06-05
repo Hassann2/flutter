@@ -203,16 +203,31 @@ class _MyHomePageState extends State<MyHomePage> {
                andare ad alle proprietà del colore con l'attributo all<Color> andiamo a dire di andare ad accedere a tutta la lista di colori che sarà di tipo Color
                Infine andiamo a dire che tra la lista di colori vogliamo usare il colore rosso (Colors è un'array di colori) 
               */
-              style: ButtonStyle(
-                foregroundColor: WidgetStateProperty.all<Color>(Colors.red),
 
-                // è la proprietà di flutter che controlla i colori quando l'utente interagisce con un widget cliccabile, come ad esempio un pulsante
-                overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
-                  if (states.contains(WidgetState.pressed)) {
-                    return Colors.amber;
-                  }
-                  return null;
-                }),
+              // Ci sono due modi per modficare lo stile di un pulsante:
+              // 1:
+              // style: ButtonStyle(
+              //   foregroundColor: WidgetStateProperty.all<Color>(Colors.red),
+
+              //   // è la proprietà di flutter che controlla i colori quando l'utente interagisce con un widget cliccabile, come ad esempio un pulsante
+              //   overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
+              //    quà li stiamo dicendo che se lo stato del pulsante è pressed, quindi il pulsante è stato premuto allora cambia il colore del pulsante in amber
+              //     if (states.contains(WidgetState.pressed)) {
+              //       return Colors.amber;
+              //     }
+              /*    infine gli diciamo che la funzione overlay non deve ritornare nulla di default 
+                  se non c'è nessun azione all'interno di quest'ultimo */
+              //     return null;
+              //   }),
+              // ),
+
+              /* il secondo modo andiamo ad accedere alla proprietà style dello specifico pulsante (Elevated Button),
+              mentre prima accedevamo allo stile dei pulsanti in maniera generale, quì andiamo ad accedere ai attributi dello specifico pulsante
+              permettendoci così di stilizzare il pulsante in maniera più semplice */
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.red,
+                backgroundColor: Colors.orange,
+                padding: EdgeInsets.symmetric(vertical: 50, horizontal: 60),
               ),
             ),
 
