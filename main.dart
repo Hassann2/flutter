@@ -1,9 +1,8 @@
 // Importo il pacchetto Material Design di Flutter che contiene tutti i widget
-// Widget sono gli elementi che si vedono a schermo (un'app i flutter è composta tutta da Widget anche le funzioni/azioni dell'app sono dei Widget)
+// Widget sono gli elementi che si vedono a schermo
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// Importiamo il pacchetto di google per usare il font
 import 'package:google_fonts/google_fonts.dart';
 
 // Funzione principale (entry point) - viene eseguita quando l'app si avvia
@@ -88,16 +87,10 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         // Serve per mettere l'icona alla appBar
         leading: Icon(Icons.offline_bolt),
-
-        
         // Serve per dare la larghezza all'icona non é obbligatori di default è 52
         leadingWidth: 100,
-
-        
-        // Se lo mettiamo qualsiasi cosa arriva dopo l'appBar non viene mostrata a schermo, viene ignorata
+        // qualsiasi cosa arriva dopo l'appBar non viene mostrata a schermo
         // automaticallyImplyLeading: false,
-
-        // Serve a metere dei pulsanti nella barra di sopra con il quale possiamo interagire
         actions: [
           IconButton(onPressed: () => {}, icon: Icon(Icons.access_time)),
           IconButton(onPressed: () => {}, icon: Icon(Icons.access_time)),
@@ -121,24 +114,50 @@ class _MyHomePageState extends State<MyHomePage> {
         titleTextStyle: TextStyle(fontWeight: FontWeight.bold),
       ),
       // Serve per creare il menù laterale
-      drawer: Drawer(),
+      // drawer: Drawer(),
 
-      // body è il contenuto principale della schermata (sotto la barra), lo mettiamo al centro della schermata (Center)
+      // body è il contenuto principale della schermata (sotto la barra), lo mettiamo al centro della schermata
       body: Center(
-        // Center, serve a cenntrare il widget figlio nello spazio disponibile
-        // Column dispone i suoi figli in VERTICALE (uno sopra l'altro), come una colonna
+        // Center centra il suo widget figlio nello spazio disponibile
         child: Column(
+          // Column dispone i suoi figli in VERTICALE (uno sopra l'altro), come una colonna
           // mainAxisAlignment.center li centra verticalmente, in base allo schermo
           mainAxisAlignment: MainAxisAlignment.center,
 
           // children è la lista dei widget da disporre in colonna
           children: [
             // Primo testo statico - const perché non cambia mai
-            const Text('You have pushed the button this many times:'),
-
+            const Text(
+              'You have pushed the button this many times:',
+              style: TextStyle(
+                // Modifica colore testo
+                color: Colors.red,
+                // Modifica sfondo testo
+                backgroundColor: Colors.lightBlueAccent,
+                // Mettere in grassetto il testo (chiamata anche peso del font)
+                fontWeight: FontWeight.w800,
+                // Modifica della grandezza del font
+                fontSize: 30,
+                // Spazio tra le parole
+                letterSpacing: 5,
+                // Spazio tra una parola e l'altra
+                wordSpacing: 10,
+                shadows: [
+                  Shadow(
+                    // Posizione dell'ombra sull'asse x e sull'asse y
+                    offset: Offset(10, 10),
+                    // Quanto è sfocato il colore dell'ombra
+                    blurRadius: 3.0,
+                    /* Colore dell'ombra in ARGB, (alpha "l'opacità dell'ombra", red, green, blue), 
+                    sono i colori primari che se vengono mescolate formano un nuovo colore */
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                ],
+              ),
+            ),
             // Secondo testo - mostra il valore del contatore
+            // $_counter inserisce il valore della variabile nella stringa
             Text(
-              // $_counter inserisce il valore della variabile nella stringa
               '$_counter',
               // Stile del testo (preso dal tema, headlineMedium è un formato grande)
               style: Theme.of(context).textTheme.headlineMedium,
@@ -147,7 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
 
-      // floatingActionButton è il bottone circolare in basso a destra, appunto come dice il nome è un pulsante d'azione fluttuante
+      // floatingActionButton è il bottone circolare in basso a destra
       floatingActionButton: FloatingActionButton(
         // onPressed definisce cosa succede quando premi il bottone, và ad eseguire la funzione incrementcounter
         onPressed: _incrementCounter,
