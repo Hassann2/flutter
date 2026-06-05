@@ -16,7 +16,7 @@ void main() {
 // StatelessWidget significa che questo widget NON cambia mai (è immutabile)
 
 class MyApp extends StatelessWidget {
-  // Costruttore costante con parametro opzionale key (passato al padre) è l'init in swift, (super.init)
+  // Costruttore costante con parametro opzionale key (passato al padre, "super"). E' l'init in swift, (super.init)
   const MyApp({super.key});
 
   // Sovrascrive il metodo build - dice come deve essere disegnato il widget
