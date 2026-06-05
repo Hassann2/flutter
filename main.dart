@@ -126,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // mainAxisAlignment.center li centra verticalmente, in base allo schermo
           mainAxisAlignment: MainAxisAlignment.center,
 
-          // children è la lista dei widget da disporre in colonna
+          // children è la lista dei widget da disporre in colonna, childre è sempre un'array
           children: [
             // Primo testo statico - const perché non cambia mai
             const Text(
