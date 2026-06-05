@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // setState informa Flutter che lo stato è cambiato
     // Flutter ridisegnerà automaticamente l'interfaccia
     setState(() {
-      // Aumenta il contatore di 1
+      // Aumenta il contatore di 1, il ++ stà a dire (counter = counter + 1)
       _counter++;
     });
   }
