@@ -126,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // mainAxisAlignment.center li centra verticalmente, in base allo schermo
           mainAxisAlignment: MainAxisAlignment.center,
 
-          // children è la lista dei widget da disporre in colonna, childre è sempre un'array
+          // children è la lista dei widget da disporre in colonna
           children: [
             // Primo testo statico - const perché non cambia mai
             const Text(
@@ -227,6 +227,9 @@ class _MyHomePageState extends State<MyHomePage> {
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.red,
                 backgroundColor: Colors.orange,
+                /* mettiamo un padding di 50, simmetrico ossia che i valori che diamo vengono applicati a tutti i lati 
+                abbiamo dato 50 verticalmente ossia 50 da sopra e sotto 
+                poi 60 orizzontalmente quindi 60 da destra e 60 da sinistra */
                 padding: EdgeInsets.symmetric(vertical: 50, horizontal: 60),
               ),
             ),
