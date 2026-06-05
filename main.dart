@@ -87,11 +87,11 @@ class _MyHomePageState extends State<MyHomePage> {
         // widget.title accede al titolo definito in MyHomePage
         title: Text(widget.title),
         // Serve per mettere l'icona alla appBar
-        // leading: Icon(Icons.offline_bolt),
+        leading: Icon(Icons.offline_bolt),
 
         
         // Serve per dare la larghezza all'icona non é obbligatori di default è 52
-        // leadingWidth: 100,
+        leadingWidth: 100,
 
         
         // Se lo mettiamo qualsiasi cosa arriva dopo l'appBar non viene mostrata a schermo, viene ignorata
@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
         titleTextStyle: TextStyle(fontWeight: FontWeight.bold),
       ),
       // Serve per creare il menù laterale
-      // drawer: Drawer(),
+      drawer: Drawer(),
 
       // body è il contenuto principale della schermata (sotto la barra), lo mettiamo al centro della schermata (Center)
       body: Center(
