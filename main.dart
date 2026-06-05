@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+// Importiamo il pacchetto di google per usare il font
 import 'package:google_fonts/google_fonts.dart';
 
 // Funzione principale (entry point) - viene eseguita quando l'app si avvia
@@ -87,10 +88,16 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         // Serve per mettere l'icona alla appBar
         // leading: Icon(Icons.offline_bolt),
+
+        
         // Serve per dare la larghezza all'icona non é obbligatori di default è 52
         // leadingWidth: 100,
-        // qualsiasi cosa arriva dopo l'appBar non viene mostrata a schermo
+
+        
+        // Se lo mettiamo qualsiasi cosa arriva dopo l'appBar non viene mostrata a schermo, viene ignorata
         // automaticallyImplyLeading: false,
+
+        // Serve a metere dei pulsanti nella barra di sopra con il quale possiamo interagire
         actions: [
           IconButton(onPressed: () => {}, icon: Icon(Icons.access_time)),
           IconButton(onPressed: () => {}, icon: Icon(Icons.access_time)),
@@ -116,11 +123,11 @@ class _MyHomePageState extends State<MyHomePage> {
       // Serve per creare il menù laterale
       // drawer: Drawer(),
 
-      // body è il contenuto principale della schermata (sotto la barra), lo mettiamo al centro della schermata
+      // body è il contenuto principale della schermata (sotto la barra), lo mettiamo al centro della schermata (Center)
       body: Center(
-        // Center centra il suo widget figlio nello spazio disponibile
+        // Center, serve a cenntrare il widget figlio nello spazio disponibile
+        // Column dispone i suoi figli in VERTICALE (uno sopra l'altro), come una colonna
         child: Column(
-          // Column dispone i suoi figli in VERTICALE (uno sopra l'altro), come una colonna
           // mainAxisAlignment.center li centra verticalmente, in base allo schermo
           mainAxisAlignment: MainAxisAlignment.center,
 
@@ -130,8 +137,8 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text('You have pushed the button this many times:'),
 
             // Secondo testo - mostra il valore del contatore
-            // $_counter inserisce il valore della variabile nella stringa
             Text(
+              // $_counter inserisce il valore della variabile nella stringa
               '$_counter',
               // Stile del testo (preso dal tema, headlineMedium è un formato grande)
               style: Theme.of(context).textTheme.headlineMedium,
@@ -140,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
 
-      // floatingActionButton è il bottone circolare in basso a destra
+      // floatingActionButton è il bottone circolare in basso a destra, appunto come dice il nome è un pulsante d'azione fluttuante
       floatingActionButton: FloatingActionButton(
         // onPressed definisce cosa succede quando premi il bottone, và ad eseguire la funzione incrementcounter
         onPressed: _incrementCounter,
