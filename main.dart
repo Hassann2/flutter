@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         // .fromSeed genera automaticamente colori complementari
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         /* Dico che il seguente testo avrà come tema il font di google che ho importato all'inizio del codice, 
-        andando a sovvrascivere il tema di default di Flutter */
+        andando a sovvrascivere il tema dei testi di default di Flutter */
         textTheme: GoogleFonts.playwriteGbJTextTheme(),
       ),
 
@@ -158,11 +158,53 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             // Secondo testo - mostra il valore del contatore
-            // $_counter inserisce il valore della variabile nella stringa
+            // $_counter inserisce il valore della variabile nella stringa, con il trattino basso mettiamo la variabile come privata
             Text(
               '$_counter',
               // Stile del testo (preso dal tema, headlineMedium è un formato grande)
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+
+            /* è un tipo di pulsante che non ritorna nessun'azione con il child andiamo a mettere gli elementi all'interno del pulsante 
+            Se mettiamo ad onPressed null come valore disabilitiamo il pulsante,
+            Dentro child possiamo avere più Widget
+            */
+
+            // Testo Pulsante
+            TextButton(
+              onPressed: () => {},
+              child: const Text('Pulsante con testo'),
+            ),
+
+            // Pulsante con ripieno
+            ElevatedButton(
+              onPressed: () => {},
+              child: const Text("Pulsante con ripieno blu"),
+            ),
+
+            // Pulsante con bordo
+            OutlinedButton(
+              onPressed: () => {},
+              child: const Text("Pulsante con bordo"),
+            ),
+
+            // Pulsanti con icone
+            TextButton.icon(
+              onPressed: () => {},
+              icon: Icon(Icons.access_time_filled),
+              label: const Text("Pulsante testo con icona"),
+            ),
+
+            ElevatedButton.icon(
+              onPressed: () => {},
+              icon: Icon(Icons.access_time_filled),
+              label: const Text("Pulsante con ripieno e icona"),
+            ),
+
+            OutlinedButton.icon(
+              onPressed: () => {},
+              icon: const Icon(Icons.abc_outlined),
+              label: const Text("Pulsante con bordo e icona"),
             ),
           ],
         ),
