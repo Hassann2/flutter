@@ -1,5 +1,5 @@
 // Importo il pacchetto Material Design di Flutter che contiene tutti i widget
-// Widget sono gli elementi che si vedono a schermo
+// Widget sono gli elementi che si vedono a schermo (un'app i flutter è composta tutta da Widget anche le funzioni/azioni dell'app sono dei Widget)
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
