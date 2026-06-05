@@ -8,7 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 // Funzione principale (entry point) - viene eseguita quando l'app si avvia
 void main() {
   // Lancia l'app e dice a Flutter di usare MyApp come widget principale
-  // const indica che MyApp è costante e non cambierà mai durante l'esecuzione
+  // const indica che MyApp è costante e non cambierà mai durante l'esecuzione, né durante la scrittura del codice
   runApp(const MyApp());
 }
 
