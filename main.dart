@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 
   // Sovrascrive il metodo build - dice come deve essere disegnato il widget
   @override
-  // build riceve BuildContext (il "path" o posizione del widget nell'albero, ossia dove si trova nella gerarchia dell'app)
+  // build riceve BuildContext (il "path" o posizione del widget nell'albero, ossia dove si trova nella gerarchia dell'app, ad esempio questo widget si trova sopra tutti i widget in primo piano)
   Widget build(BuildContext context) {
     // Ritorna MaterialApp - il widget che fornisce lo stile Material Design (gli elementi del widget)
     return MaterialApp(
