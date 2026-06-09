@@ -16,7 +16,7 @@ void main() {
 // StatelessWidget significa che questo widget NON cambia mai (è immutabile)
 
 class MyApp extends StatelessWidget {
-  // Costruttore costante con parametro opzionale key (passato al padre, "super"). E' l'init in swift, (super.init)
+  // Costruttore costante con parametro opzionale key (passato al padre) è l'init in swift, (super.init)
   const MyApp({super.key});
 
   // Sovrascrive il metodo build - dice come deve essere disegnato il widget
@@ -127,7 +127,19 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
 
           // children è la lista dei widget da disporre in colonna
-          children: [
+          children: <Widget>[
+            SizedBox(
+              width: 300,
+              height: 300,
+              child: Image.network(
+                'https://blog-api.landr.com/wp-content/uploads/2025/08/How-to-Make-Ambient-Music.png',
+                width: 500,
+                color: Colors.red,
+                colorBlendMode: BlendMode.exclusion,
+                fit: BoxFit.fill,
+                alignment: Alignment.center,
+              ),
+            ),
             // Primo testo statico - const perché non cambia mai
             const Text(
               'You have pushed the button this many times:',
@@ -157,6 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+
             // Secondo testo - mostra il valore del contatore
             // $_counter inserisce il valore della variabile nella stringa, con il trattino basso mettiamo la variabile come privata
             Text(
@@ -221,7 +234,6 @@ class _MyHomePageState extends State<MyHomePage> {
               //   }),
               // ),
 
-              // 2:
               /* il secondo modo andiamo ad accedere alla proprietà style dello specifico pulsante (Elevated Button),
               mentre prima accedevamo allo stile dei pulsanti in maniera generale, quì andiamo ad accedere ai attributi dello specifico pulsante
               permettendoci così di stilizzare il pulsante in maniera più semplice */
